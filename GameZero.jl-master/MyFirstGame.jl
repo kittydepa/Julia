@@ -1,3 +1,10 @@
+# BEFORE RUNNING THIS< MAKE SURE YOU HAVE DONE:
+# 'using GameZero' within Julia
+# To exectue, do 'rungame(<file>)'
+
+#############################################
+
+
 # First, set the size of the game window
 HEIGHT = 800
 WIDTH = 800
