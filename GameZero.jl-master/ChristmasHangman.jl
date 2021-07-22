@@ -7,6 +7,7 @@
 WIDTH = 600
 HEIGHT = 500
 BACKGROUND = colorant"#f58e90"
+tree_green = colorant"#36c22d"
 
 tree_lines = [
     ((340, 300), (340, 260)),
@@ -27,6 +28,10 @@ tree_lines = [
 ]
 
 function draw()
+    for i in 1:15 # because 15 lines to draw the tree
+        draw(Line(tree_lines[i][1]..., tree_lines[i][2]...), # The first tuple, and the second tuple. The '...', called a splatter, takes the individual elements within the tuple
+            tree_green )
+    end
 end
 
 function update()
