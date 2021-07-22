@@ -14,6 +14,7 @@ word_list = readlines(joinpath(@__DIR__, "words.txt")) # joinpath joins a direct
 # If your wordlist has padding for example, you can clean it up like so:
 word_list = strip.(word_list)
 word = rand(word_list)
+word_array = string.(collect(word))
 num_chars = length(word)
 answer = fill(" ", num_chars)
 
@@ -48,8 +49,18 @@ function draw()
         draw(Line(50i, 450, 50i + 40, 450), colorant"white")
         draw(Line(50i, 451, 50i + 40, 451), colorant"white") # Cannot change line thickness, so we draw another line underneath it, by increasing the Y1 and Y2 values by 1.
     end
-    
+
 end
+
+
+# Taking user input
+function on_key_down(g, k)
+    key_pressed = lowercase(string(k))
+    if key_pressed in letters && if key_pressed in word_array
+        answer[findall(x -> x == key_pressed, word_array)] .= key_pressed # Shows which position, (if at all) the pressed letter is, in the word_array/word. And using .= allows for MULTIPLE answers/values
+    end
+end 
+
 
 function update()
 end
