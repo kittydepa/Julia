@@ -57,7 +57,7 @@ end
 function on_key_down(g, k)
     key_pressed = lowercase(string(k))
     if key_pressed in letters && key_pressed in word_array
-        @show "found $key_prsesed in word"
+        @show "found $key_pressed in word"
         answer[findall(x -> x == key_pressed, word_array)] .= key_pressed # Shows which position, (if at all) the pressed letter is, in the word_array/word. And using .= allows for MULTIPLE answers/values
     end
 end 
@@ -67,4 +67,4 @@ function update()
 end
 
 
-# Time: 
+# Time: 1:24:57
