@@ -1,11 +1,12 @@
 # First, set the size of the game window
-HEIGHT = 600
-WIDTH = 600
+HEIGHT = 800
+WIDTH = 800
 BACKGROUND = colorant"#f5d1ff"
-heart = Actor("heart.png")
+heart_actor = Actor("heart.png")
+heart_actor.pos = (280, 300)
 
 function draw()
-    draw(heart)
+    draw(heart_actor)
 end
 
 function update()
