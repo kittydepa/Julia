@@ -11,4 +11,5 @@ end
 
 function update()
     heart_actor.x = heart_actor.x + 2 # this moves the actor (image) !!!
+    heart_actor.y = heart_actor.y + 2
 end
