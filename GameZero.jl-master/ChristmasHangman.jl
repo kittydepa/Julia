@@ -9,6 +9,11 @@ HEIGHT = 500
 BACKGROUND = colorant"#f58e90"
 tree_green = colorant"#12690d"
 
+word_list = readlines(joinpath(@__DIR__, "words.txt")) # joinpath joins a directory and a path. joinpath(<current directory>, 'filename')
+
+# If your wordlist has padding for example, you can clean it up like so:
+word_list = strip.(word_list)
+
 tree_lines = [
     ((340, 300), (340, 260)),
     ((340, 260), (500, 260)),
