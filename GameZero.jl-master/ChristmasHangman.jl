@@ -50,7 +50,8 @@ function draw()
     for i in 1:num_chars
         draw(Line(50i, 450, 50i + 40, 450), colorant"white")
         draw(Line(50i, 451, 50i + 40, 451), colorant"white") # Cannot change line thickness, so we draw another line underneath it, by increasing the Y1 and Y2 values by 1.
-        t = TextActor(answer[i], "coure"; pos = (50i + 10, 420))
+        t = TextActor(answer[i], "8514oem"; pos = (50i + 10, 430))
+        draw(t)
     end
 
 end
