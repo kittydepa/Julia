@@ -43,10 +43,16 @@ function draw()
         draw(Line(tree_lines[i][1]..., tree_lines[i][2]...), # The first tuple, and the second tuple. The '...', called a splatter, takes the individual elements within the tuple
             tree_green )
     end
+    
+    for i in 1:num_chars
+        draw(Line(50i, 450, 50i + 40, 450), colorant"white")
+        draw(Line(50i, 451, 50i + 40, 451), colorant"white") # Cannot change line thickness, so we draw another line underneath it, by increasing the Y1 and Y2 values by 1.
+    end
+    
 end
 
 function update()
 end
 
 
-# 1:03:23
+# Time: 
