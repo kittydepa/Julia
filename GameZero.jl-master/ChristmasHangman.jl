@@ -13,6 +13,12 @@ word_list = readlines(joinpath(@__DIR__, "words.txt")) # joinpath joins a direct
 
 # If your wordlist has padding for example, you can clean it up like so:
 word_list = strip.(word_list)
+word = rand(word_list)
+num_chars = length(word)
+answer = fill(" ", num_chars)
+
+# Need to store a list of ALL possible characters
+letters = string.(collect('a':'z')) # Convert from 'char' to a string
 
 tree_lines = [
     ((340, 300), (340, 260)),
