@@ -1,5 +1,6 @@
 ## WORKSHOP TUTORIAL FROM JULIACON 2021, 22 JULY
 Originally from: https://github.com/aviks/GameZero.jl
+Only the .jl files within this main folder are Julia files that I have worked on.
 
 
 
