@@ -21,6 +21,11 @@ answer = fill(" ", num_chars)
 # Need to store a list of ALL possible characters
 letters = string.(collect('a':'z')) # Convert from 'char' to a string
 
+# Setting a max possible score
+score = 15
+state = "playing"
+
+# Drawing the Xmas tree 'hangman'
 tree_lines = [
     ((340, 300), (340, 260)),
     ((340, 260), (500, 260)),
@@ -41,7 +46,7 @@ tree_lines = [
 
 function draw()
     # Draw the lines for the tree/'hangman'
-    for i in 1:15
+    for i in 1:(15 - score)
         draw(Line(tree_lines[i][1]..., tree_lines[i][2]...), # The first tuple, and the second tuple. The '...', called a splatter, takes the individual elements within the tuple
             tree_green )
     end
@@ -54,15 +59,38 @@ function draw()
         draw(t)
     end
 
+    # Draw the 'score board'
+    sc = TextActor("Tries: $score", "8514oem"; pos = (450, 20))
+    draw(sc)
+
+    # Draw end result
+    if state == "won"
+        st = TextActor("You won!", "8514oem"; pos = (220, 220))
+        draw(st)
+    elseif state == "lost"
+        st = TextActor("You lost, boo.", "8514oem"; pos = (220, 220))
+        draw(st)
+    end
 end
 
 
 # Taking user input
 function on_key_down(g, k)
+    global score
     key_pressed = lowercase(string(k))
     if key_pressed in letters && key_pressed in word_array
         @show "found $key_pressed in word"
         answer[findall(x -> x == key_pressed, word_array)] .= key_pressed # Shows which position, (if at all) the pressed letter is, in the word_array/word. And using .= allows for MULTIPLE answers/values
+    else
+        score = score - 1
+    end
+
+    global state
+    if score < 1
+        state = "lost"
+    end
+    if !(" " in answer)
+        state = "won"
     end
 end 
 
