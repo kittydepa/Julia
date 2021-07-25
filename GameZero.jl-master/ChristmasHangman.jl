@@ -88,6 +88,7 @@ function on_key_down(g, k)
     global state
     if score < 1
         state = "lost"
+        @show word
     end
     if !(" " in answer)
         state = "won"
@@ -97,6 +98,5 @@ end
 
 function update()
 end
-
 
 # Time: 1:27:27
