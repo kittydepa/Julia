@@ -1,5 +1,13 @@
-# GameZero
 ## WORKSHOP TUTORIAL FROM JULIACON 2021, 22 JULY
+Originally from: https://github.com/aviks/GameZero.jl
+<br>
+Only the .jl files within this main folder are Julia files that I have worked on.
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+# GameZero
 
 [![version](https://juliahub.com/docs/GameZero/version.svg)](https://juliahub.com/ui/Packages/GameZero/tTDGf)
 [![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://juliahub.com/docs/GameZero/tTDGf/)
