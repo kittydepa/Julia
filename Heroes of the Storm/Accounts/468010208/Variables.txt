@@ -1,0 +1,11 @@
+alternateclock=true
+mastervolume=0.678000
+musicvolume=0.652000
+privacygamestatus=true
+soundambiencevolume=0.556611
+soundeffectsvolume=0.580927
+soundreadyvolume=0.568769
+sounduivolume=0.580927
+soundvoicesvolume=0.501900
+targetinfopanelpositionx=-0.491508
+targetinfopanelpositiony=-2.000000
